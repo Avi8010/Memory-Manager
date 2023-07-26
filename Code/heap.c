@@ -14,7 +14,7 @@
 
 #define ARRAY_SIZE 512
 
-#define MIN_UNITS_IN_CHUNK 3
+#define MIN_UNITS_IN_CHUNK 1024
 
 
 
@@ -134,7 +134,7 @@ void removeFromList(chunkPtr p){
 
 void printHeap(){
 
-	int i;
+	/*int i;
 	chunkPtr ch;
 
 	for(i = 0; i < ARRAY_SIZE; i++){
@@ -145,7 +145,60 @@ void printHeap(){
 		}
 	}
 	printf("\n");
-	return;
+	return;*/
+	
+	chunkPtr curr = memStart;
+    int totalChunks = 0;
+    int usedChunks = 0;
+    int freeChunks = 0;
+    int totalUnits = 0;
+    int unusedChunks =0;
+    int cnt=1;
+
+    printf("Chunk Status:\n");
+
+    while (curr != NULL) {
+        totalChunks++;
+        if(cnt>512){
+         break;
+        }
+        if (chunkStatus(curr)) {
+            usedChunks++;
+            printf("\x1b[31m■\x1b[0m ");  // Red square box representing an allocated chunk
+        } else if (curr->size > sizeof(chunk)) {
+            unusedChunks++;
+            printf("\x1b[32m■\x1b[0m ");
+             // Yellow square box representing a freed chunk
+        } else {
+            freeChunks++;
+            printf("\x1b[33m■\x1b[0m "); 
+              // Green square box representing a free chunk
+        }
+        if(cnt%64==0){
+          printf("\n");
+        }
+        cnt++;
+        
+        curr = getNextMem(curr, memEnd);
+       
+    }
+
+    printf("\n");
+    /*printf("Total Chunks: \x1b[37m%d\x1b[0m\n", totalChunks);
+    printf("Used Chunks:  \x1b[31m%d\x1b[0m\n", usedChunks);
+    printf("Unused Chunks: \x1b[32m%d\x1b[0m\n", unusedChunks);
+    printf("Free Chunks: \x1b[33m%d\x1b[0m\n", freeChunks);
+    printf("\n");*/
+    printf("\n");
+    printf("Chunk Statistics:\n");
+    printf("+--------------+-------------+---------------+--------------+\n");
+    printf("| \x1b[31mInuse Chunks\x1b[0m | \x1b[33mFree Chunks\x1b[0m | \x1b[32mUnused Chunks\x1b[0m | Total chunks |\n");
+    printf("+--------------+-------------+---------------+--------------+\n");
+    printf("|     \x1b[31m%d\x1b[0m        |     \x1b[33m%d\x1b[0m       |      \x1b[32m%d\x1b[0m        |      \x1b[37m%d\x1b[0m       |\n", usedChunks, freeChunks,unusedChunks, totalChunks);
+    printf("+--------------+-------------+---------------+--------------+\n\n");
+    //printf("%d\n",totalUnits);
+    printf("\n");
+    
 }
 
 
