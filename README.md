@@ -17,12 +17,3 @@
 ![test1](https://github.com/Avi8010/Memory-Manager/assets/124759114/ffdd3d55-5fd0-410c-a2ef-13d17842d44e)
 
 
-## Usage:
-Steps:
-1. Clone Project
-```
-git clone https://github.com/Avi8010/Placement_Predictor.git
-```
-
-## Contributors
-- <a href="https://github.com/Avi8010">Avinash Maharnavar</a>
