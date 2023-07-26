@@ -7,19 +7,14 @@
 
 
 ## Tech Stack:
-- HTML, CSS, Python.
-- Flask framework.
-- Jupyter Notebook.
+- C Programming language.
+- Data Structures (Linked List). 
 
 ## Screenshots:
-### Home page:
-User have to fill this form.
-![Screenshot (99)](https://github.com/Avi8010/Placement_Predictor/assets/124759114/61855759-9501-4d6e-977f-72fcb0951737)
 
-### Result Page:
-User redirected to the result page after submitting form.
-![Screenshot (98)](https://github.com/Avi8010/Placement_Predictor/assets/124759114/85997a0a-bf8b-4654-b9c0-294a3a2e9492)
+![test](https://github.com/Avi8010/Memory-Manager/assets/124759114/8a59361a-6507-4902-8ddd-7a0bbf4957dc)
 
+![test1](https://github.com/Avi8010/Memory-Manager/assets/124759114/ffdd3d55-5fd0-410c-a2ef-13d17842d44e)
 
 
 ## Website Link:
