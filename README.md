@@ -2,7 +2,7 @@
 
 ---
 ## Overview:
-<p>The project is an implementation memory allocation scheme to address the problem of memory fragmentation. Project implements the malloc, dealloc, calloc, free functions to dynamically allocate and deallocate memory. The algorithm used to find the free chunk for allocation is based on the first fit algorithm of memory allocation in operating system. The project runs on some test cases to successfully demonstrate the memory fragmmentation statistics.
+<p>The project is an implementation memory allocation scheme to address the problem of memory fragmentation. Project implements the malloc, dealloc, calloc and free functions to dynamically allocate and deallocate memory. The algorithm used to find the free chunk for allocation is based on the first fit algorithm of memory allocation in operating system. The project runs on some test cases to successfully demonstrate the memory fragmmentation statistics.
 </p>
 
 
